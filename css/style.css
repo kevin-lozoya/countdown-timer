@@ -1,0 +1,35 @@
+.icon {
+    vertical-align: bottom;
+}
+
+.cuadro {
+    margin-bottom: 10px;
+}
+.cuadro div {
+    display: inline-block;
+}
+
+.countdown {
+    text-align: center;
+}
+
+.countdown-title {
+    margin-bottom: 0;
+}
+
+.countdown-digito {
+    display: inline-block;
+    margin-right: 2px;
+}
+
+.digito-numero {
+    padding: 3px 28px;
+    background-color: #697e93;
+    color: #fff;
+    font-size: 2em;
+}
+.digito-descripcion {
+    text-align: left;
+    padding: 5px;
+    font-size: small;
+}

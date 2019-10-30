@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Countdown Timer</title>
+	<link rel="stylesheet" type="text/css" media="all" href="css/theme.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/calendar.js" ></script>
+	<script type="text/javascript" src="js/calendar-es.js" ></script>
+	<script type="text/javascript" src="js/calendar-setup.js" ></script>
+	<script type="text/javascript" src="js/caracteresPermitidos.js"></script>
+	
+</head>
+<body>
+	<noscript>
+		Por favor, activa el Javascript para el correcto funcionamiento de la página.
+	</noscript>
+
+	<form id="formulario" name="formulario">
+		<div class="cuadro">
+			<input type="hidden" id="fecha" onchange="ponerFecha()"/> 
+			<div style="display: inline-block">
+				<label for="dia">Día:</label><br/>
+				<input type="text" name="dia" id="dia" placeholder="dd"  maxlength="2" size="5" onkeypress="return permite(event, 'num')" />
+				<span><b>/</b></span>
+			</div>
+			<div style="display: inline-block">
+				<label for="mes">Mes:</label><br/>
+				<input type="text" name="mes" id="mes" placeholder="mm" maxlength="2" size="5" onkeypress="return permite(event, 'num')" />
+				<span><b>/</b></span>
+			</div>
+			<div style="display: inline-block">
+				<label for="ano">Año:</label><br/>
+				<input type="text" name="ano" id="ano" placeholder="yyyy" maxlength="4" size="5" onkeypress="return permite(event, 'num')" />
+			</div>
+			<div style="display: inline-block">
+				<img src="img/calendar-icon.png" id="selector" width="30" class="icon" />
+			</div>
+		</div>
+		<div class="cuadro">
+			<div style="display: inline-block">
+				<label for="hora">Hora:</label><br/>
+				<input type="text" name="hora" id="hora" placeholder="hh" maxlength="2" size="5" onkeypress="return permite(event, 'num')" />
+				<span><b>:</b></span>
+			</div>
+			<div style="display: inline-block">
+				<label for="minuto">Minuto:</label><br/>
+				<input type="text" name="minuto" id="minuto" placeholder="mm" maxlength="2" size="5" onkeypress="return permite(event, 'num')" />
+				<span><b>:</b></span>
+			</div>
+			<div style="display: inline-block">
+				<label for="segundo">Segundo:</label><br/>
+				<input type="text" name="segundo" id="segundo" placeholder="ss" maxlength="2" size="5" onkeypress="return permite(event, 'num')" />
+			</div>
+		</div>
+		<div class="cuadro">
+			<input type="button" id="boton"  value="Crear Countdown"/>
+		</div>
+	</form>
+		<div class="countdown">
+			<h1 class="countdown-title">Countdown Timer</h1>
+			<div class="countdown-digito">
+				<div class="digito-numero" id="cd-dias">0</div>
+				<div class="digito-descripcion">DIAS</div>
+			</div>
+			<div class="countdown-digito">
+				<div class="digito-numero" id="cd-horas">0</div>
+				<div class="digito-descripcion">HORAS</div>
+			</div>
+			<div class="countdown-digito">
+				<div class="digito-numero" id="cd-min">0</div>
+				<div class="digito-descripcion">MINUTOS</div>
+			</div>
+			<div class="countdown-digito">
+				<div class="digito-numero" id="cd-sec">0</div>
+				<div class="digito-descripcion">SEGUNDOS</div>
+			</div>
+		</div>
+
+	<h2 id="mensaje" class="countdown"></h2>
+
+	<script type="text/javascript" src="js/countdown.js"></script>
+</body>
+</html>
